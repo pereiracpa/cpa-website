@@ -514,6 +514,10 @@ p {
     color: #ffffff;
 }
 
+div.footer-section:nth-child(2) {
+    margin-left: 3.5rem;
+}
+
 .footer-section:nth-child(2) .contact-list i {
     color: #90cdf4;
 }
@@ -576,6 +580,10 @@ p {
     }
     .service-card h3 {
         font-size: 1.4rem;
+    }
+
+    div.footer-section:nth-child(2) {
+        margin-left: 0.5rem;
     }
 }
 
