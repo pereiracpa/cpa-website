@@ -310,6 +310,13 @@ p {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -366,7 +373,7 @@ p {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #48bb78;
+    color: #2b6cb0;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -489,7 +496,7 @@ p {
 .contact-list i {
     width: 16px;
     text-align: center;
-    color: #63b3ed; /* blue accent #90cdf4*/
+    color: #90cdf4; /* blue accent #63b3ed*/
     flex-shrink: 0;
 }
 
@@ -551,6 +558,12 @@ p {
 }
 
 /* Responsive Design */
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .nav-container {
         flex-wrap: wrap;
@@ -618,6 +631,10 @@ p {
     .services-grid {
         grid-template-columns: 1fr;
     }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -643,6 +660,9 @@ p {
 
     .cta-section {
         padding: 3rem 0;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
     }
 }
 
