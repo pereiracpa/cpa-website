@@ -514,6 +514,10 @@ p {
     color: #ffffff;
 }
 
+.footer-section:nth-child(2) .contact-list i {
+    color: #90cdf4;
+}
+
 /* Footer */
 .footer {
     background: #2d3748;
