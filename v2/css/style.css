@@ -558,9 +558,12 @@ p {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 1028px) {
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .service-card h3 {
+        font-size: 1.4rem;
     }
 }
 
