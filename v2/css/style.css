@@ -315,6 +315,19 @@ p {
     margin-bottom: 1rem;
 }
 
+.service-icons {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #ebf4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.75rem;
+    color: #2b6cb0;
+}
+
 .service-card h3 {
     color: #2b6cb0;
     margin-bottom: 1rem;
@@ -476,7 +489,7 @@ p {
 .contact-list i {
     width: 16px;
     text-align: center;
-    color: #63b3ed; /* blue accent 90cdf4*/
+    color: #63b3ed; /* blue accent #90cdf4*/
     flex-shrink: 0;
 }
 
