@@ -304,6 +304,10 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.service-card h3 {
+    font-size: 1.2rem;
+}
+
 .service-card:hover,
 .service-card:focus-within {
     transform: translateY(-5px);
