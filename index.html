@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pereira CPA - A Brighter Path to Simple, Reliable, and Compliant Finances</title>
     <meta name="description" content="Pereira CPA Corp. is an Ontario-based CPA firm dedicated to simplifying complex financial matters for individuals and businesses. Expert bookkeeping, tax filing, and fractional CFO services.">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
 </head>
 <body>
@@ -47,40 +48,51 @@
     <main id="main-content" role="main">
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-heading">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 id="hero-heading" class="hero-title" data-translate="hero-title">A Brighter Path to Simple, Reliable, and Compliant Finances</h1>
-                    <p class="hero-subtitle" data-translate="hero-subtitle">Pereira CPA helps you stay compliant and in control — making financial discipline easier, so you can focus on what matters most.</p>
-                    <div class="hero-cta">
-                        <a href="#consultation" class="btn btn-primary" role="button" data-translate="hero-cta">Book Time With Us</a>
-                        <p class="hero-languages"><small data-translate="hero-languages">Available in English, French, and Spanish</small></p>
-                    </div>
-                </div>
+        <div class="container">
+          <div class="hero-content">
+            <h1 id="hero-heading" class="hero-title" data-translate="hero-title">A Brighter Path to Simple, Reliable, and Compliant Finances</h1>
+            <p class="hero-subtitle" data-translate="hero-subtitle">Pereira CPA helps you stay compliant and in control — making financial discipline easier, so you can focus on what matters most.</p>
+            <div class="hero-cta">
+              <a href="#consultation" class="pcpa-book-now" data-translate="hero-cta">
+                Book Time With Us
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <p class="hero-languages"><small data-translate="hero-languages">Available in English, French, and Spanish</small></p>
             </div>
+          </div>
+        </div>
         </section>
 
         <!-- Services Section -->
         <section id="services" class="services" aria-labelledby="services-heading">
             <div class="container">
                 <h2 id="services-heading" class="section-title" data-translate="services-title">Our Expert Services</h2>
-                <div class="services-grid">
+                <div class="service-grid">
                     <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">📊</div>
+                        <div class="service-icons" aria-hidden="true">
+                          <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
                         <h3 data-translate="service-cfo-title">Fractional CFO Services</h3>
                         <p data-translate="service-cfo-desc">Strategic financial planning, forecasting, and decision support to guide your business growth.</p>
                     </article>
                     <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">📚</div>
+                        <div class="service-icons" aria-hidden="true">
+                          <i class="fa-solid fa-book-open"></i>
+                        </div>
                         <h3 data-translate="service-bookkeeping-title">Bookkeeping</h3>
                         <p data-translate="service-bookkeeping-desc">Accurate, timely, and reliable financial records that keep your business organized and compliant.</p>
                     </article>
                     <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">🏢</div>
+                        <div class="service-icons" aria-hidden="true">
+                          <i class="fa-solid fa-building"></i>
+                        </div>
                         <h3 data-translate="service-corporate-title">Corporate Tax Filings</h3>
                         <p data-translate="service-corporate-desc">Full compliance with CRA requirements, optimized strategies for your business structure.</p>
                     </article>
                     <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">📋</div>
+                        <div class="service-icons" aria-hidden="true">
+                          <i class="fa-solid fa-file-invoice"></i>
+                        </div>
                         <h3 data-translate="service-personal-title">Personal Tax Filings</h3>
                         <p data-translate="service-personal-desc">Stress-free tax preparation and submission for individuals and families across Ontario.</p>
                     </article>
@@ -196,18 +208,41 @@
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
-                    <ul>
-                        <li><a href="#services">Fractional CFO Services</a></li>
-                        <li><a href="#services">Bookkeeping</a></li>
-                        <li><a href="#services">Corporate Tax Filings</a></li>
-                        <li><a href="#services">Personal Tax Filings</a></li>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                            <a href="#services">Fractional CFO Services</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                            <a href="#services">Bookkeeping</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-building" aria-hidden="true"></i>
+                            <a href="#services">Corporate Tax Filings</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+                            <a href="#services">Personal Tax Filings</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>📧 Email: <a href="mailto:roberto@pereira-cpa.com">roberto@pereira-cpa.com</a></p>
-                    <p>🌐 Website: <a href="http://www.pereira-cpa.com">www.pereira-cpa.com</a></p>
-                    <p>📍 Serving clients across Ontario, Canada</p>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:roberto@pereira-cpa.com">roberto@pereira-cpa.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                            <a href="http://www.pereira-cpa.com">www.pereira-cpa.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>Serving clients across Ontario, Canada</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -215,7 +250,6 @@
             </div>
         </div>
     </footer>
-
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
