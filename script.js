@@ -116,45 +116,64 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Simulate form submission
                 const submitButton = consultationForm.querySelector('button[type="submit"]');
                 const originalText = submitButton.textContent;
-                
+
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
-                
-                // Simulate API call
-                setTimeout(() => {
-                    submitButton.textContent = 'Thank You! We\'ll Contact You Soon';
-                    submitButton.style.backgroundColor = '#48bb78';
-                    
-                    // Show success message
-                    const successMessage = document.createElement('div');
-                    successMessage.className = 'success-message';
-                    successMessage.style.cssText = `
-                        background: #f0fff4;
-                        border: 1px solid #48bb78;
-                        color: #22543d;
-                        padding: 1rem;
-                        border-radius: 6px;
-                        margin-top: 1rem;
-                        text-align: center;
-                    `;
-                    successMessage.textContent = 'Thank you for your interest! We\'ll contact you within 24 hours to schedule your free consultation.';
-                    successMessage.setAttribute('role', 'alert');
-                    successMessage.setAttribute('aria-live', 'polite');
-                    
-                    consultationForm.appendChild(successMessage);
-                    
-                    // Reset form after 3 seconds
-                    setTimeout(() => {
-                        consultationForm.reset();
+
+                emailjs.sendForm('service_vefw45r', 'template_nagqr46', consultationForm)
+                    .then(() => {
+                        submitButton.textContent = 'Thank You! We\'ll Contact You Soon';
+                        submitButton.style.backgroundColor = '#48bb78';
+
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'success-message';
+                        successMessage.style.cssText = `
+                            background: #f0fff4;
+                            border: 1px solid #48bb78;
+                            color: #22543d;
+                            padding: 1rem;
+                            border-radius: 6px;
+                            margin-top: 1rem;
+                            text-align: center;
+                        `;
+                        successMessage.textContent = 'Thank you for your interest! We\'ll contact you within 24 hours to schedule your free consultation.';
+                        successMessage.setAttribute('role', 'alert');
+                        successMessage.setAttribute('aria-live', 'polite');
+
+                        consultationForm.appendChild(successMessage);
+
+                        setTimeout(() => {
+                            consultationForm.reset();
+                            submitButton.textContent = originalText;
+                            submitButton.disabled = false;
+                            submitButton.style.backgroundColor = '#2b6cb0';
+                            successMessage.remove();
+                        }, 5000);
+                    })
+                    .catch(() => {
                         submitButton.textContent = originalText;
                         submitButton.disabled = false;
-                        submitButton.style.backgroundColor = '#2b6cb0';
-                        successMessage.remove();
-                    }, 5000);
-                }, 2000);
+
+                        const errorMessage = document.createElement('div');
+                        errorMessage.className = 'success-message';
+                        errorMessage.style.cssText = `
+                            background: #fff5f5;
+                            border: 1px solid #e53e3e;
+                            color: #742a2a;
+                            padding: 1rem;
+                            border-radius: 6px;
+                            margin-top: 1rem;
+                            text-align: center;
+                        `;
+                        errorMessage.textContent = 'Something went wrong. Please try again or email us directly.';
+                        errorMessage.setAttribute('role', 'alert');
+
+                        consultationForm.appendChild(errorMessage);
+
+                        setTimeout(() => errorMessage.remove(), 5000);
+                    });
             }
         });
         
