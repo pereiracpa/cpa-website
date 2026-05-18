@@ -122,6 +122,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
 
+                const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx2WAm01-72k10aXEDd3TP3EP4rMBD4EK9-hsSX6uQJl7vejhhXcoALhDMweXhCg0kISw/exec';
+                const formData = new FormData(consultationForm);
+                fetch(SHEET_URL, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        firstName:      formData.get('firstName'),
+                        lastName:       formData.get('lastName'),
+                        email:          formData.get('email'),
+                        phone:          formData.get('phone'),
+                        businessType:   formData.get('businessType'),
+                        servicesNeeded: formData.get('servicesNeeded'),
+                        message:        formData.get('message')
+                    })
+                }).catch(() => {});
+
                 emailjs.sendForm('service_vefw45r', 'template_nagqr46', consultationForm)
                     .then(() => {
                         submitButton.textContent = 'Thank You! We\'ll Contact You Soon';
