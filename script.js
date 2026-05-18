@@ -122,7 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
 
-                emailjs.sendForm('service_vefw45r', 'template_nagqr46', consultationForm)
+                //emailjs.sendForm('service_vefw45r', 'template_nagqr46', consultationForm)
+                emailjs.sendForm('service_x8kjkwk', 'template_nagqr46', consultationForm)
                     .then(() => {
                         submitButton.textContent = 'Thank You! We\'ll Contact You Soon';
                         submitButton.style.backgroundColor = '#48bb78';
